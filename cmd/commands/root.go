@@ -60,7 +60,7 @@ var RootCmd = &cobra.Command{
 func init() {
 	// Define your flags and configuration settings.
 	RootCmd.PersistentFlags().StringVar(&kubeConfig, "kubeconfig", "", "kubernetes config path")
-	RootCmd.PersistentFlags().StringVar(&operatorNamespace, "operator-namespace", "", "Kubernetes namespace where rook operator is running")
+	RootCmd.PersistentFlags().StringVar(&operatorNamespace, "operator-namespace", "o", "Kubernetes namespace where rook operator is running")
 	RootCmd.PersistentFlags().StringVarP(&cephClusterNamespace, "namespace", "n", "rook-ceph", "Kubernetes namespace where CephCluster is created")
 	RootCmd.PersistentFlags().StringVar(&kubeContext, "context", "", "Kubernetes context to use")
 }
